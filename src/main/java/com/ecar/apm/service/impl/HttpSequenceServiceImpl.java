@@ -100,7 +100,7 @@ public class HttpSequenceServiceImpl implements HttpSequenceService{
 	public List<Map<String, Object>> getLogByGuid(String guid){
 		
 		List<Map<String, Object>> list = httpSequenceLogMapper.selectLogByPguid(guid);
-
+		System.out.println("这是test2，影响到的分支");
 		for(Map<String,Object> item : list){
 			
 		}
