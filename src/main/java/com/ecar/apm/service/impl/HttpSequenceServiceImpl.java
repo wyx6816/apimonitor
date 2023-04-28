@@ -60,6 +60,7 @@ public class HttpSequenceServiceImpl implements HttpSequenceService{
 			item.put("type", HttpSequence.getMonitorTypeName(String.valueOf(item.get("type"))));
 			String guid = String.valueOf(item.get("guid"));
 			//启动监控
+			System.out.println("这是test1分支影响到的接口：monitorList，方法是：getMonitorList");
 			if((boolean)item.get("enabled")){
 				//平均响应时间
 				Object avgCostTime = httpSequenceLogMapper.selectAvgCostTimeByPguid(guid);
