@@ -48,6 +48,7 @@ public class HttpRequestServiceImpl implements HttpRequestService {
     @Override
     public boolean disableMonitor(String guid) {
     	HttpSequence instance = httpSequenceService.getByGuid(guid);
+		System.out.println("这是test3接口");
     	DynamicJobManager dynamicJobManager = new DynamicJobManager(instance);
         return dynamicJobManager.kill();
     }
